@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>LibHaru-Tekla</id>
+    <version>0.0.0-localbuild</version>
+    <authors>Takeshi Kanno, Antony Dovgal</authors>
+    <owners>Takeshi Kanno, Antony Dovgal</owners>
+    <licenseUrl>http://libharu.org/</licenseUrl>
+    <projectUrl>http://libharu.org/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>LibHaru is a free open source library for generating PDF files (x64, v140).</description>
+    <copyright>Copyright 1999-2009 Takeshi Kanno, Antony Dovgal.</copyright>
+    <title>LibHaru (Tekla build)</title>
+    <tags>LibHaru  native  CoApp nativepackage</tags>
+  </metadata>
+  <files>
+    <file src="LibHaru-Tekla.targets" target="/build/native/LibHaru-Tekla.targets" />
+
+    <file src="..\..\include\*.h" target="/build/native/include/" />
+
+    <file src="..\Build\x64\140-Release\LibHaru.lib" target="/build/native/lib/x64/v140/LibHaru.lib" />
+  </files>
+</package>

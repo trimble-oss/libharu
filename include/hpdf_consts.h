@@ -32,7 +32,7 @@
 /* buffer size which is required when we convert to character string. */
 #define HPDF_TMP_BUF_SIZ            512
 #define HPDF_SHORT_BUF_SIZ          32
-#define HPDF_REAL_LEN               11
+#define HPDF_REAL_LEN               15 // was 11 with old real limits
 #define HPDF_INT_LEN                11
 #define HPDF_TEXT_DEFAULT_LEN       256
 #define HPDF_UNICODE_HEADER_LEN     2
@@ -109,8 +109,8 @@
 #define HPDF_LIMIT_MAX_INT             2147483647
 #define HPDF_LIMIT_MIN_INT             -2147483647
 
-#define HPDF_LIMIT_MAX_REAL            32767
-#define HPDF_LIMIT_MIN_REAL            -32767
+#define HPDF_LIMIT_MAX_REAL            3.403e38  // PDF1.7 limit, was 32767
+#define HPDF_LIMIT_MIN_REAL            -3.403e38 // PDF1.7 limit, was -32767
 
 #define HPDF_LIMIT_MAX_STRING_LEN      65535
 #define HPDF_LIMIT_MAX_NAME_LEN        127

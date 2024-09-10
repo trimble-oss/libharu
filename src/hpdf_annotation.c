@@ -390,9 +390,10 @@ HPDF_3DAnnot_New    (HPDF_MMgr        mmgr,
         return NULL;
     }
 
-    ret += HPDF_Dict_AddName (action, "A", "PV");
+    ret += HPDF_Dict_AddName (action, "A", "PO");
 
-    ret += HPDF_Dict_AddBoolean(action, "TB", HPDF_FALSE);
+//     ret += HPDF_Dict_AddBoolean(action, "TB", HPDF_FALSE); // don't show default navigation bar
+    ret += HPDF_Dict_AddBoolean(action, "NP", HPDF_TRUE); // show model tree
 
     if (ret != HPDF_OK) {
         return NULL;

@@ -118,6 +118,9 @@ HPDF_LoadU3DFromFile  (HPDF_Doc     pdf,
 		image = NULL;
 	}
 
+	if (image && (pdf->compression_mode & HPDF_COMP_IMAGE))
+	    image->filter = HPDF_STREAM_FILTER_FLATE_DECODE;
+
 	/* destroy file stream */
 	HPDF_Stream_Free (imagedata);
 

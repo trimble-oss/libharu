@@ -262,7 +262,8 @@ HPDF_NewDoc  (HPDF_Doc  pdf)
 
     ptr = (char *)HPDF_StrCpy (ptr, (const char *)"Haru Free PDF Library ", eptr);
     version = HPDF_GetVersion ();
-    HPDF_StrCpy (ptr, version, eptr);
+    ptr = (char *)HPDF_StrCpy (ptr, version, eptr);
+    HPDF_StrCpy (ptr, " (modified by Tekla Corp)", eptr);
 
     if (HPDF_SetInfoAttr (pdf, HPDF_INFO_PRODUCER, buf) != HPDF_OK)
         return HPDF_CheckError (&pdf->error);
